@@ -1,0 +1,202 @@
+body {
+	background:#000 url("../images/global.jpg");
+	background-size: 100% auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	/*font-family: 'Julius Sans One', sans-serif;*/
+	font-family: 'Assistant', sans-serif;
+	/*font-family: 'Special Elite', cursive;*/
+
+  color: #000;
+
+	text-align: center;
+}
+
+h1 {
+  	display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  	font-size: 50px;
+}
+
+h2 {
+  	display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  	font-size: 25px;
+}
+
+p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  	font-size: 15px;
+}
+
+img {
+	width: auto;
+	height: 250px;
+	max-width: 90%;
+	margin: 0% 0%;
+  border: none;
+}
+
+li {
+	list-style-type: none;
+    cursor:pointer;
+}
+
+div {
+	/*clear: both;*/
+}
+table {
+	border-width: 10px;
+}
+
+tr {
+    margin: 10px 10px 10px 10px;
+}
+
+td {
+	border: 2px #808080 solid;
+    background-color: #eee;
+    width: 160px;
+    height: 120px;
+}
+
+button {
+	/*border: 2px #808080 solid;
+  background-color: #eee;
+  width: 160px;
+  height: 120px;*/
+}
+
+.picked, .matched {
+  transform: rotateY(180deg);
+}
+
+.flag {
+  margin: 10px 0px 10px 0px;
+
+}
+
+.class {
+  border-style: none;
+}
+
+.title {
+  color: white;
+}
+
+#player1 {
+  border: 2px #808080 solid;
+  background-color: #000;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+  border-style: none;
+}
+
+#player2 {
+  border: 2px #808080 solid;
+  background-color: #000;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+  border-style: none;
+}
+
+#message1 {
+  border: 2px #808080 solid;
+  background-color: #000;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+  border-style: none;
+  
+}
+
+#message2 {
+  border: 2px #808080 solid;
+  background-color: #000;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+  border-style: none;
+}
+
+.card {
+  /*float: left;*/
+  border: 2px #808080 solid;
+  background-color: #eee;
+  height: 12vh;
+  border-style: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*** footer ***/
+.footer {
+  /*position: fixed;*/
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  text-align: center;
+  background: #666666;
+  /*bottom: 0;*/
+  left: 0;
+  
+  font-size: 15px;
+  color: #cccccc;
+
+  border-top: 5px solid #cccccc;
+  /*position: absolute;*/
+  bottom: 0;
+
+  /*margin-bottom: 0;*/
+  /*clear: both;*/
+}
+
+h4 {
+    display: block;
+  text-align: center;
+}
+
+#loginMessage {
+  display: inline;
+  color: red;
+}
+
+.modal-title {
+  margin: 0 auto;
+  font-weight:  600;
+  font-size:  30px
+
+}
+
+.modal-body {
+  margin:   0 auto;
+}
+
+.modal-footer {
+  margin: 0 auto;
+ 
+}
+
+.btn {
+  color: #fff;
+  width: 200px;
+}
+
+.form-control {
+  width: 50%;
+}
+
+.input-group-btn {
+  width: 20%;
+}
+
+.modal-message {
+  color: white;
+}
+
+.navbar-light .navbar-toggler{
+  max-height: 75px;
+}
