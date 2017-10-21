@@ -147,6 +147,7 @@
 </div>
 
 <!-- Modal HTML -->
+<!--
 <div id="contact" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -158,6 +159,29 @@
                 <p>Aram Albaro</p>
                 <p>1-800-555-5555</p>
                 <p>Email: <a href="mailto:MemoryGames@gmail.com">MemoryGames@gmail.com</a></p>
+                
+            </div>
+            <div class="modal-footer text-center">
+               <button type="button" class="close" data-dismiss="modal" > Close</button>
+            </div>   
+        </div>
+    </div>
+</div>
+
+-->
+
+<!-- Modal HTML -->
+<div id="contact" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Contact</h4>
+            
+            </div>
+            <div class="modal-body">
+                <p>Aram Albaro</p>
+                <p>1-800-555-5555</p>
+                <p onclick="window.location.href = 'mailto:MemoryGames@gmail.com';">Email: MemoryGames@gmail.com</p>
                 
             </div>
             <div class="modal-footer text-center">
@@ -180,6 +204,24 @@
 -->
 
 <div id="message-area">
+  <div class="row" >
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div id="player1"></div>
+      <div id="message1"></div>
+    </div>
+    <div class=" col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div id="player2"></div>
+      <div id="message2"></div>
+    </div>
+  </div>
+</div> 
+
+<!--
+<div id="message-area">
   <div class="row">
     <div id="player1" class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
     <div id="player2" class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
@@ -187,7 +229,7 @@
     <div id="message2" class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
   </div>
 </div> 
-
+-->
 <div id="panel">
   <div class="row">
     <div id="1_1" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
