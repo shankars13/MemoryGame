@@ -581,7 +581,7 @@ window.onload = function(event) {
         isYourTurn = 1;
       }
       else {
-        $("#message1").html("It's not your turn. Please wait.");
+        $("#message2").html("It's not your turn. Please wait.");
         isYourTurn = 0;
       }
 
