@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memory Game</title>
+
+	<!--Link to Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Assistant|Julius+Sans+One|Special+Elite" rel="stylesheet">
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- javasctip.js -->
+	<script type="text/javascript" src="assets/javascript/javascript.js"></script>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-dark">
+  <a class="navbar-brand" href="#"><div class="title">Memory Game</div></a>
+  <div class="room"></div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#howToUse" data-toggle="modal">HOW TO PLAY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact" data-toggle="modal">CONTACT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#logout" data-toggle="modal">Log out</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+
+<!-- Modal HTML   How to Use
+<div id="howToUse" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">How to Play :</h4>
+            </div>
+            <div class="modal-body">
+                <p>Steps ....</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!-- Modal HTML   Contact 
+<div id="contact" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Contact :</h4>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!-- Modal HTML   Logout -->
+<div id="logout" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <p>You want to log out?</p>
+                <input id="logout" type="submit" value="Log out">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal HTML   Game End -->
+<div id="logout" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <p>You want to log out or Restart?</p>
+                <input id="logout" type="submit" value="Log out">
+                <input id="restart" type="submit" value="Restart">       
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal HTML -->
+<div id="howToUse" class="modal fade">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center">How to Play</h4>
+          <br>
+          <br>
+            </div>
+            <div class="modal-body text-left">
+                <!--<p>1) Ensure to delete players 1 and 2 by clicking buttons "P1 Delete" and "P2 Delete".</p>
+                <p>2) Enter your name in the box that says "Name" then click the start button.</p>-->
+                <p>1) Wait for the 2nd player to enter there name in a similiar fashion.</p>
+                <p>2) Once all players are ready to play the computer will tell you who's turn it is.</p>
+                <p>3) The player will be allowed to click 2 cards. If both cards match that player will be given another chance to match another 2 cards.</p>
+                <P>4) If cards do not match the next player will have a chance to match the cards.</P>
+                <p>5) Player who has matched the most cards will wins</p>
+            </div>
+
+            <div class="modal-footer text-center">
+                Enjoy and good luck!!! <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal HTML -->
+<div id="contact" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Contact</h4>
+            
+            </div>
+            <div class="modal-body">
+                <p>Aram Albaro</p>
+                <p>1-800-555-5555</p>
+                <p>Email: <a href="mailto:MemoryGames@gmail.com">MemoryGames@gmail.com</a></p>
+                
+            </div>
+            <div class="modal-footer text-center">
+               <button type="button" class="close" data-dismiss="modal" > Close</button>
+            </div>   
+        </div>
+    </div>
+</div>
+<!--
+<div id="start">
+	<form name="input-form">
+		<input id="name-input" type="text" placeholder="Name">
+    <input id="add-user" type="submit" value="Start">
+    <input id="delete-user" type="submit" value="Delete">
+    <input id="delete-p1" type="submit" value="P1 Delete">
+    <input id="delete-p2" type="submit" value="P2 Delete">
+    <input id="restart" type="submit" value="Restart">
+	</form>
+</div>
+-->
+
+<div id="message-area">
+  <div class="row">
+    <div id="player1" class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
+    <div id="player2" class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
+    <div id="message1" class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
+    <div id="message2" class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
+  </div>
+</div> 
+
+<div id="panel">
+  <div class="row">
+    <div id="1_1" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="1_2" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="1_3" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="1_4" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="2_1" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="2_2" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="2_3" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="2_4" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="3_1" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="3_2" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="3_3" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="3_4" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="4_1" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="4_2" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="4_3" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+    <div id="4_4" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 flag">BLAH</div>
+  </div>
+</div>
+
+<div class="footer bg-dark">
+    <p class="copy">&copy;Copyright 2017 Shubha, Aram, Hugh</p>
+</div>
+
+</body>
+</html>
