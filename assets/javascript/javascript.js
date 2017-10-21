@@ -577,7 +577,7 @@ window.onload = function(event) {
       console.log("turn:" + currentTurn);
       if (yourPlayerId == currentTurn ) {
         console.log("your turn");
-        $("#message1").html("You're turn");
+        $("#message2").html("You're turn");
         isYourTurn = 1;
       }
       else {
